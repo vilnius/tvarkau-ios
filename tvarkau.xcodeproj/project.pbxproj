@@ -13,6 +13,8 @@
 		539FD9711DA8C52C00C0B66B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96F1DA8C52C00C0B66B /* LaunchScreen.storyboard */; };
 		539FD9A01DA8CF5F00C0B66B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539FD99D1DA8CF5F00C0B66B /* Nimble.framework */; };
 		539FD9A21DA8CF5F00C0B66B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539FD99E1DA8CF5F00C0B66B /* Quick.framework */; };
+		539FD9A81DA8D9BD00C0B66B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539FD9A71DA8D9BD00C0B66B /* Defaults.plist */; };
+		539FD9A91DA8D9BD00C0B66B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539FD9A71DA8D9BD00C0B66B /* Defaults.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		539FD99D1DA8CF5F00C0B66B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		539FD99E1DA8CF5F00C0B66B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		539FD9A51DA8D31000C0B66B /* Vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vers.h; path = ../Vers.h; sourceTree = "<group>"; };
+		539FD9A71DA8D9BD00C0B66B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,7 @@
 		539FD9A61DA8D31500C0B66B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				539FD9A71DA8D9BD00C0B66B /* Defaults.plist */,
 				539FD9721DA8C52C00C0B66B /* Info.plist */,
 				539FD9A51DA8D31000C0B66B /* Vers.h */,
 			);
@@ -261,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539FD9A81DA8D9BD00C0B66B /* Defaults.plist in Resources */,
 				539FD9711DA8C52C00C0B66B /* LaunchScreen.storyboard in Resources */,
 				539FD96E1DA8C52C00C0B66B /* Assets.xcassets in Resources */,
 				539FD96C1DA8C52C00C0B66B /* Main.storyboard in Resources */,
@@ -271,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539FD9A91DA8D9BD00C0B66B /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

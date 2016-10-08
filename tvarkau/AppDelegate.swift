@@ -13,4 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    override static func initialize() {
+        guard let path = Bundle.main.path(forResource: "Defaults", ofType: "plist") else { return }
+
+        let dict = NSDictionary(contentsOfFile: path) as! [String: AnyObject]
+
+        let defaults = UserDefaults.standard
+
+        defaults.register(defaults: dict)
+    }
+
 }
