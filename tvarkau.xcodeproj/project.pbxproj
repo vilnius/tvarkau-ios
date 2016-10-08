@@ -41,6 +41,7 @@
 		539FD97D1DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539FD9821DA8C52C00C0B66B /* tvarkauUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tvarkauUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		539FD9881DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		539FD9A51DA8D31000C0B66B /* Vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +92,11 @@
 		539FD9631DA8C52C00C0B66B /* tvarkau */ = {
 			isa = PBXGroup;
 			children = (
+				539FD9A61DA8D31500C0B66B /* Supporting Files */,
 				539FD9641DA8C52C00C0B66B /* AppDelegate.swift */,
 				539FD96A1DA8C52C00C0B66B /* Main.storyboard */,
 				539FD96D1DA8C52C00C0B66B /* Assets.xcassets */,
 				539FD96F1DA8C52C00C0B66B /* LaunchScreen.storyboard */,
-				539FD9721DA8C52C00C0B66B /* Info.plist */,
 			);
 			path = tvarkau;
 			sourceTree = "<group>";
@@ -114,6 +115,15 @@
 				539FD9881DA8C52C00C0B66B /* Info.plist */,
 			);
 			path = tvarkauUITests;
+			sourceTree = "<group>";
+		};
+		539FD9A61DA8D31500C0B66B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				539FD9721DA8C52C00C0B66B /* Info.plist */,
+				539FD9A51DA8D31000C0B66B /* Vers.h */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
