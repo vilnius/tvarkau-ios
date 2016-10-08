@@ -11,6 +11,8 @@
 		539FD96C1DA8C52C00C0B66B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96A1DA8C52C00C0B66B /* Main.storyboard */; };
 		539FD96E1DA8C52C00C0B66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96D1DA8C52C00C0B66B /* Assets.xcassets */; };
 		539FD9711DA8C52C00C0B66B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96F1DA8C52C00C0B66B /* LaunchScreen.storyboard */; };
+		539FD9A01DA8CF5F00C0B66B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539FD99D1DA8CF5F00C0B66B /* Nimble.framework */; };
+		539FD9A21DA8CF5F00C0B66B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539FD99E1DA8CF5F00C0B66B /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		539FD97D1DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539FD9821DA8C52C00C0B66B /* tvarkauUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tvarkauUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		539FD9881DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		539FD99D1DA8CF5F00C0B66B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		539FD99E1DA8CF5F00C0B66B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		539FD9A51DA8D31000C0B66B /* Vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539FD9A21DA8CF5F00C0B66B /* Quick.framework in Frameworks */,
+				539FD9A01DA8CF5F00C0B66B /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,7 @@
 				539FD9631DA8C52C00C0B66B /* tvarkau */,
 				539FD97A1DA8C52C00C0B66B /* tvarkauTests */,
 				539FD9851DA8C52C00C0B66B /* tvarkauUITests */,
+				539FD99B1DA8CF4800C0B66B /* Frameworks */,
 				539FD9621DA8C52C00C0B66B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +124,23 @@
 			path = tvarkauUITests;
 			sourceTree = "<group>";
 		};
+		539FD99B1DA8CF4800C0B66B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				539FD99C1DA8CF5200C0B66B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		539FD99C1DA8CF5200C0B66B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				539FD99D1DA8CF5F00C0B66B /* Nimble.framework */,
+				539FD99E1DA8CF5F00C0B66B /* Quick.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		539FD9A61DA8D31500C0B66B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +177,7 @@
 				539FD9731DA8C52C00C0B66B /* Sources */,
 				539FD9741DA8C52C00C0B66B /* Frameworks */,
 				539FD9751DA8C52C00C0B66B /* Resources */,
+				539FD9A41DA8D09000C0B66B /* Run Carthage */,
 			);
 			buildRules = (
 			);
@@ -258,12 +283,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		539FD9A41DA8D09000C0B66B /* Run Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Run Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		539FD95D1DA8C52C00C0B66B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */,
+				539FD9971DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +459,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BZW4CW4732;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tvarkau/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkau;
@@ -427,6 +476,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BZW4CW4732;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tvarkau/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkau;
@@ -440,11 +493,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BZW4CW4732;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tvarkauTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkauTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tvarkau.app/tvarkau";
 			};
@@ -455,7 +514,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BZW4CW4732;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tvarkauTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkauTests;
