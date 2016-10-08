@@ -45,7 +45,7 @@
 		539FD9881DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539FD99D1DA8CF5F00C0B66B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		539FD99E1DA8CF5F00C0B66B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		539FD9A51DA8D31000C0B66B /* Vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vers.h; sourceTree = "<group>"; };
+		539FD9A51DA8D31000C0B66B /* Vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vers.h; path = ../Vers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +464,8 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = tvarkau/Info.plist;
+				INFOPLIST_PREFIX_HEADER = $SRCROOT/Vers.h;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,6 +483,8 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = tvarkau/Info.plist;
+				INFOPLIST_PREFIX_HEADER = $SRCROOT/Vers.h;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
