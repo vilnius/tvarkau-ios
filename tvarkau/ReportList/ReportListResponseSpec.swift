@@ -39,15 +39,3 @@ class ReportListResponseSpec: QuickSpec {
         }
     }
 }
-
-struct ReportListResponse {
-    let reports: [Report]
-}
-
-extension ReportListResponse: Decodable {
-    static func decode(_ json: JSON) -> Decoded<ReportListResponse> {
-        return curry(ReportListResponse.init)
-            <^> json <|| "result"
-    }
-}
-

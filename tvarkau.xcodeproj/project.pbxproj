@@ -17,6 +17,8 @@
 		538229E41DB28E7100321194 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229E21DB28E6E00321194 /* Report.swift */; };
 		538229E81DB2956600321194 /* ReportListResponseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229E71DB2956600321194 /* ReportListResponseSpec.swift */; };
 		538229EA1DB2963E00321194 /* ReportListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 538229E91DB2963E00321194 /* ReportListResponse.json */; };
+		538229EC1DB2994A00321194 /* ReportListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229EB1DB2994A00321194 /* ReportListResponse.swift */; };
+		538229ED1DB2994A00321194 /* ReportListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229EB1DB2994A00321194 /* ReportListResponse.swift */; };
 		539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FD9641DA8C52C00C0B66B /* AppDelegate.swift */; };
 		539FD96C1DA8C52C00C0B66B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96A1DA8C52C00C0B66B /* Main.storyboard */; };
 		539FD96E1DA8C52C00C0B66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96D1DA8C52C00C0B66B /* Assets.xcassets */; };
@@ -56,6 +58,7 @@
 		538229E21DB28E6E00321194 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = ReportList/Report.swift; sourceTree = "<group>"; };
 		538229E71DB2956600321194 /* ReportListResponseSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportListResponseSpec.swift; path = ReportList/ReportListResponseSpec.swift; sourceTree = "<group>"; };
 		538229E91DB2963E00321194 /* ReportListResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ReportListResponse.json; path = ReportList/ReportListResponse.json; sourceTree = "<group>"; };
+		538229EB1DB2994A00321194 /* ReportListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportListResponse.swift; sourceTree = "<group>"; };
 		539FD9611DA8C52C00C0B66B /* tvarkau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvarkau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539FD9641DA8C52C00C0B66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539FD96B1DA8C52C00C0B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 			children = (
 				538229E71DB2956600321194 /* ReportListResponseSpec.swift */,
 				538229E91DB2963E00321194 /* ReportListResponse.json */,
+				538229EB1DB2994A00321194 /* ReportListResponse.swift */,
 			);
 			name = ReportListResponse;
 			sourceTree = "<group>";
@@ -412,6 +416,7 @@
 			files = (
 				539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */,
 				539FD9971DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
+				538229EC1DB2994A00321194 /* ReportListResponse.swift in Sources */,
 				538229E31DB28E6E00321194 /* Report.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +429,7 @@
 				539FD9981DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
 				539FD9AC1DA8DCAC00C0B66B /* ReportSpec.swift in Sources */,
 				538229E81DB2956600321194 /* ReportListResponseSpec.swift in Sources */,
+				538229ED1DB2994A00321194 /* ReportListResponse.swift in Sources */,
 				538229E41DB28E7100321194 /* Report.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
