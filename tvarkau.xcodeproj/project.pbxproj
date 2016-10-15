@@ -15,6 +15,8 @@
 		538229E01DB26CF200321194 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229DE1DB26CEA00321194 /* Runes.framework */; };
 		538229E31DB28E6E00321194 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229E21DB28E6E00321194 /* Report.swift */; };
 		538229E41DB28E7100321194 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229E21DB28E6E00321194 /* Report.swift */; };
+		538229E81DB2956600321194 /* ReportListResponseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229E71DB2956600321194 /* ReportListResponseSpec.swift */; };
+		538229EA1DB2963E00321194 /* ReportListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 538229E91DB2963E00321194 /* ReportListResponse.json */; };
 		539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FD9641DA8C52C00C0B66B /* AppDelegate.swift */; };
 		539FD96C1DA8C52C00C0B66B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96A1DA8C52C00C0B66B /* Main.storyboard */; };
 		539FD96E1DA8C52C00C0B66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96D1DA8C52C00C0B66B /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		538229D91DB26B1700321194 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		538229DE1DB26CEA00321194 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		538229E21DB28E6E00321194 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = ReportList/Report.swift; sourceTree = "<group>"; };
+		538229E71DB2956600321194 /* ReportListResponseSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportListResponseSpec.swift; path = ReportList/ReportListResponseSpec.swift; sourceTree = "<group>"; };
+		538229E91DB2963E00321194 /* ReportListResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ReportListResponse.json; path = ReportList/ReportListResponse.json; sourceTree = "<group>"; };
 		539FD9611DA8C52C00C0B66B /* tvarkau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvarkau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539FD9641DA8C52C00C0B66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539FD96B1DA8C52C00C0B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 			name = Report;
 			sourceTree = "<group>";
 		};
+		538229E61DB2953200321194 /* ReportListResponse */ = {
+			isa = PBXGroup;
+			children = (
+				538229E71DB2956600321194 /* ReportListResponseSpec.swift */,
+				538229E91DB2963E00321194 /* ReportListResponse.json */,
+			);
+			name = ReportListResponse;
+			sourceTree = "<group>";
+		};
 		539FD9581DA8C52C00C0B66B = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		539FD9941DA8C8E000C0B66B /* ReportList */ = {
 			isa = PBXGroup;
 			children = (
+				538229E61DB2953200321194 /* ReportListResponse */,
 				538229E51DB2952700321194 /* Report */,
 			);
 			name = ReportList;
@@ -337,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538229EA1DB2963E00321194 /* ReportListResponse.json in Resources */,
 				539FD9A91DA8D9BD00C0B66B /* Defaults.plist in Resources */,
 				53D62A7C1DB267F5004C8A36 /* Report.json in Resources */,
 			);
@@ -408,6 +423,7 @@
 				539FD99A1DA8CE7800C0B66B /* URLRequestextensionsSpec.swift in Sources */,
 				539FD9981DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
 				539FD9AC1DA8DCAC00C0B66B /* ReportSpec.swift in Sources */,
+				538229E81DB2956600321194 /* ReportListResponseSpec.swift in Sources */,
 				538229E41DB28E7100321194 /* Report.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
