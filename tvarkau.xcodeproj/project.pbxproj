@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		538229DA1DB26B1700321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
+		538229DB1DB26B1700321194 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D91DB26B1700321194 /* Curry.framework */; };
+		538229DC1DB26CDB00321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
+		538229DD1DB26CDB00321194 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D91DB26B1700321194 /* Curry.framework */; };
+		538229DF1DB26CEA00321194 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229DE1DB26CEA00321194 /* Runes.framework */; };
+		538229E01DB26CF200321194 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229DE1DB26CEA00321194 /* Runes.framework */; };
 		539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FD9641DA8C52C00C0B66B /* AppDelegate.swift */; };
 		539FD96C1DA8C52C00C0B66B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96A1DA8C52C00C0B66B /* Main.storyboard */; };
 		539FD96E1DA8C52C00C0B66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96D1DA8C52C00C0B66B /* Assets.xcassets */; };
@@ -38,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		538229D81DB26B1700321194 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		538229D91DB26B1700321194 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		538229DE1DB26CEA00321194 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		539FD9611DA8C52C00C0B66B /* tvarkau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvarkau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539FD9641DA8C52C00C0B66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539FD96B1DA8C52C00C0B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538229DB1DB26B1700321194 /* Curry.framework in Frameworks */,
+				538229DF1DB26CEA00321194 /* Runes.framework in Frameworks */,
+				538229DA1DB26B1700321194 /* Argo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +80,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				539FD9A21DA8CF5F00C0B66B /* Quick.framework in Frameworks */,
+				538229DC1DB26CDB00321194 /* Argo.framework in Frameworks */,
+				538229DD1DB26CDB00321194 /* Curry.framework in Frameworks */,
 				539FD9A01DA8CF5F00C0B66B /* Nimble.framework in Frameworks */,
+				539FD9A21DA8CF5F00C0B66B /* Quick.framework in Frameworks */,
+				538229E01DB26CF200321194 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +168,11 @@
 		539FD99C1DA8CF5200C0B66B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				538229D81DB26B1700321194 /* Argo.framework */,
+				538229D91DB26B1700321194 /* Curry.framework */,
 				539FD99D1DA8CF5F00C0B66B /* Nimble.framework */,
 				539FD99E1DA8CF5F00C0B66B /* Quick.framework */,
+				538229DE1DB26CEA00321194 /* Runes.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -179,6 +197,7 @@
 				539FD95D1DA8C52C00C0B66B /* Sources */,
 				539FD95E1DA8C52C00C0B66B /* Frameworks */,
 				539FD95F1DA8C52C00C0B66B /* Resources */,
+				538229E11DB286B000321194 /* Run Carthage */,
 			);
 			buildRules = (
 			);
@@ -306,6 +325,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		538229E11DB286B000321194 /* Run Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+			);
+			name = "Run Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		539FD9A41DA8D09000C0B66B /* Run Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +350,9 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 			);
 			name = "Run Carthage";
 			outputPaths = (
@@ -604,6 +643,7 @@
 				539FD98D1DA8C52C00C0B66B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		539FD98E1DA8C52C00C0B66B /* Build configuration list for PBXNativeTarget "tvarkauTests" */ = {
 			isa = XCConfigurationList;
@@ -612,6 +652,7 @@
 				539FD9901DA8C52C00C0B66B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		539FD9911DA8C52C00C0B66B /* Build configuration list for PBXNativeTarget "tvarkauUITests" */ = {
 			isa = XCConfigurationList;
@@ -620,6 +661,7 @@
 				539FD9931DA8C52C00C0B66B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
