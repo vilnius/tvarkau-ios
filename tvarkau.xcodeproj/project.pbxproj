@@ -51,7 +51,7 @@
 		538229D81DB26B1700321194 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		538229D91DB26B1700321194 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		538229DE1DB26CEA00321194 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
-		538229E21DB28E6E00321194 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		538229E21DB28E6E00321194 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = ReportList/Report.swift; sourceTree = "<group>"; };
 		539FD9611DA8C52C00C0B66B /* tvarkau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvarkau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539FD9641DA8C52C00C0B66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539FD96B1DA8C52C00C0B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		539FD9A51DA8D31000C0B66B /* Vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vers.h; path = ../Vers.h; sourceTree = "<group>"; };
 		539FD9A71DA8D9BD00C0B66B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		539FD9AB1DA8DCAC00C0B66B /* ReportSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportSpec.swift; path = ReportList/ReportSpec.swift; sourceTree = "<group>"; };
-		53D62A7B1DB267F5004C8A36 /* Report.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Report.json; sourceTree = "<group>"; };
+		53D62A7B1DB267F5004C8A36 /* Report.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Report.json; path = ReportList/Report.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +105,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		538229E51DB2952700321194 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				539FD9AB1DA8DCAC00C0B66B /* ReportSpec.swift */,
+				53D62A7B1DB267F5004C8A36 /* Report.json */,
+				538229E21DB28E6E00321194 /* Report.swift */,
+			);
+			name = Report;
+			sourceTree = "<group>";
+		};
 		539FD9581DA8C52C00C0B66B = {
 			isa = PBXGroup;
 			children = (
@@ -159,9 +169,7 @@
 		539FD9941DA8C8E000C0B66B /* ReportList */ = {
 			isa = PBXGroup;
 			children = (
-				539FD9AB1DA8DCAC00C0B66B /* ReportSpec.swift */,
-				53D62A7B1DB267F5004C8A36 /* Report.json */,
-				538229E21DB28E6E00321194 /* Report.swift */,
+				538229E51DB2952700321194 /* Report */,
 			);
 			name = ReportList;
 			sourceTree = "<group>";
