@@ -12,12 +12,12 @@ extension URLRequest {
 
     static func request(for path: String,
                                method: String = "GET",
-                               params: [String: AnyObject]? = nil) -> URLRequest {
+                               params: [String: AnyObject]? = nil) -> URLRequest? {
         let defaults = UserDefaults.standard
 
         guard let hostname = defaults.string(forKey: "TVARKAU_HOSTNAME"),
             let prefix = defaults.string(forKey: "TVARKAU_PREFIX") else {
-                fatalError("No hostname or prefix present.")
+                return nil
         }
 
         var urlComponents = URLComponents()
@@ -32,7 +32,7 @@ extension URLRequest {
         }
 
         guard let url = urlComponents.url else {
-            fatalError("Could not create url from components: \(urlComponents)")
+            return nil
         }
 
         var request = URLRequest(url: url)
