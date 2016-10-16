@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5336F9681DB3891C0024D91D /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F9671DB3891C0024D91D /* ReportService.swift */; };
+		5336F9691DB3891C0024D91D /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F9671DB3891C0024D91D /* ReportService.swift */; };
+		5336F96B1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */; };
+		5336F96C1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */; };
 		538229DA1DB26B1700321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
 		538229DB1DB26B1700321194 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D91DB26B1700321194 /* Curry.framework */; };
 		538229DC1DB26CDB00321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
@@ -19,6 +23,12 @@
 		538229EA1DB2963E00321194 /* ReportListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 538229E91DB2963E00321194 /* ReportListResponse.json */; };
 		538229EC1DB2994A00321194 /* ReportListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229EB1DB2994A00321194 /* ReportListResponse.swift */; };
 		538229ED1DB2994A00321194 /* ReportListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229EB1DB2994A00321194 /* ReportListResponse.swift */; };
+		538229F11DB29AB900321194 /* ReportServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229F01DB29AB900321194 /* ReportServiceSpec.swift */; };
+		538229F41DB29D8F00321194 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229F21DB29D8F00321194 /* ReactiveSwift.framework */; };
+		538229F51DB29D8F00321194 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229F31DB29D8F00321194 /* Result.framework */; };
+		538229F81DB29F3200321194 /* ReportFilterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229F71DB29F3200321194 /* ReportFilterSpec.swift */; };
+		538229FA1DB2A10D00321194 /* ReportFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229F91DB2A10D00321194 /* ReportFilter.swift */; };
+		538229FB1DB2A10D00321194 /* ReportFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538229F91DB2A10D00321194 /* ReportFilter.swift */; };
 		539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539FD9641DA8C52C00C0B66B /* AppDelegate.swift */; };
 		539FD96C1DA8C52C00C0B66B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96A1DA8C52C00C0B66B /* Main.storyboard */; };
 		539FD96E1DA8C52C00C0B66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539FD96D1DA8C52C00C0B66B /* Assets.xcassets */; };
@@ -52,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5336F9671DB3891C0024D91D /* ReportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportService.swift; path = Services/ReportService.swift; sourceTree = "<group>"; };
+		5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
 		538229D81DB26B1700321194 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		538229D91DB26B1700321194 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		538229DE1DB26CEA00321194 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
@@ -59,6 +71,11 @@
 		538229E71DB2956600321194 /* ReportListResponseSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportListResponseSpec.swift; path = ReportList/ReportListResponseSpec.swift; sourceTree = "<group>"; };
 		538229E91DB2963E00321194 /* ReportListResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ReportListResponse.json; path = ReportList/ReportListResponse.json; sourceTree = "<group>"; };
 		538229EB1DB2994A00321194 /* ReportListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportListResponse.swift; sourceTree = "<group>"; };
+		538229F01DB29AB900321194 /* ReportServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportServiceSpec.swift; path = Services/ReportServiceSpec.swift; sourceTree = "<group>"; };
+		538229F21DB29D8F00321194 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		538229F31DB29D8F00321194 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		538229F71DB29F3200321194 /* ReportFilterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportFilterSpec.swift; path = ReportFilterSpec/ReportFilterSpec.swift; sourceTree = "<group>"; };
+		538229F91DB2A10D00321194 /* ReportFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFilter.swift; sourceTree = "<group>"; };
 		539FD9611DA8C52C00C0B66B /* tvarkau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvarkau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539FD9641DA8C52C00C0B66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539FD96B1DA8C52C00C0B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,7 +103,9 @@
 			files = (
 				538229DB1DB26B1700321194 /* Curry.framework in Frameworks */,
 				538229DF1DB26CEA00321194 /* Runes.framework in Frameworks */,
+				538229F51DB29D8F00321194 /* Result.framework in Frameworks */,
 				538229DA1DB26B1700321194 /* Argo.framework in Frameworks */,
+				538229F41DB29D8F00321194 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,14 +141,40 @@
 			name = Report;
 			sourceTree = "<group>";
 		};
-		538229E61DB2953200321194 /* ReportListResponse */ = {
+		538229E61DB2953200321194 /* Response */ = {
 			isa = PBXGroup;
 			children = (
 				538229E71DB2956600321194 /* ReportListResponseSpec.swift */,
 				538229E91DB2963E00321194 /* ReportListResponse.json */,
 				538229EB1DB2994A00321194 /* ReportListResponse.swift */,
 			);
-			name = ReportListResponse;
+			name = Response;
+			sourceTree = "<group>";
+		};
+		538229EE1DB29A7500321194 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				538229EF1DB29AA600321194 /* Reports */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		538229EF1DB29AA600321194 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				538229F01DB29AB900321194 /* ReportServiceSpec.swift */,
+				5336F9671DB3891C0024D91D /* ReportService.swift */,
+			);
+			name = Reports;
+			sourceTree = "<group>";
+		};
+		538229F61DB29F2000321194 /* ReportFilter */ = {
+			isa = PBXGroup;
+			children = (
+				538229F71DB29F3200321194 /* ReportFilterSpec.swift */,
+				538229F91DB2A10D00321194 /* ReportFilter.swift */,
+			);
+			name = ReportFilter;
 			sourceTree = "<group>";
 		};
 		539FD9581DA8C52C00C0B66B = {
@@ -156,13 +201,15 @@
 		539FD9631DA8C52C00C0B66B /* tvarkau */ = {
 			isa = PBXGroup;
 			children = (
-				539FD9A61DA8D31500C0B66B /* Supporting Files */,
+				538229F61DB29F2000321194 /* ReportFilter */,
+				538229EE1DB29A7500321194 /* Services */,
 				539FD9951DA8C8E700C0B66B /* Extensions */,
 				539FD9941DA8C8E000C0B66B /* ReportList */,
 				539FD9641DA8C52C00C0B66B /* AppDelegate.swift */,
 				539FD96A1DA8C52C00C0B66B /* Main.storyboard */,
 				539FD96D1DA8C52C00C0B66B /* Assets.xcassets */,
 				539FD96F1DA8C52C00C0B66B /* LaunchScreen.storyboard */,
+				539FD9A61DA8D31500C0B66B /* Supporting Files */,
 			);
 			path = tvarkau;
 			sourceTree = "<group>";
@@ -186,7 +233,7 @@
 		539FD9941DA8C8E000C0B66B /* ReportList */ = {
 			isa = PBXGroup;
 			children = (
-				538229E61DB2953200321194 /* ReportListResponse */,
+				538229E61DB2953200321194 /* Response */,
 				538229E51DB2952700321194 /* Report */,
 			);
 			name = ReportList;
@@ -197,6 +244,7 @@
 			children = (
 				539FD9961DA8CE5C00C0B66B /* URLRequestExtensions.swift */,
 				539FD9991DA8CE7800C0B66B /* URLRequestextensionsSpec.swift */,
+				5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +264,8 @@
 				538229D91DB26B1700321194 /* Curry.framework */,
 				539FD99D1DA8CF5F00C0B66B /* Nimble.framework */,
 				539FD99E1DA8CF5F00C0B66B /* Quick.framework */,
+				538229F21DB29D8F00321194 /* ReactiveSwift.framework */,
+				538229F31DB29D8F00321194 /* Result.framework */,
 				538229DE1DB26CEA00321194 /* Runes.framework */,
 			);
 			name = iOS;
@@ -380,6 +430,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			name = "Run Carthage";
 			outputPaths = (
@@ -399,6 +451,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			name = "Run Carthage";
 			outputPaths = (
@@ -415,9 +469,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */,
+				5336F9681DB3891C0024D91D /* ReportService.swift in Sources */,
 				539FD9971DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
+				5336F96B1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */,
 				538229EC1DB2994A00321194 /* ReportListResponse.swift in Sources */,
 				538229E31DB28E6E00321194 /* Report.swift in Sources */,
+				538229FA1DB2A10D00321194 /* ReportFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,9 +484,14 @@
 			files = (
 				539FD99A1DA8CE7800C0B66B /* URLRequestextensionsSpec.swift in Sources */,
 				539FD9981DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
+				5336F9691DB3891C0024D91D /* ReportService.swift in Sources */,
+				538229F11DB29AB900321194 /* ReportServiceSpec.swift in Sources */,
 				539FD9AC1DA8DCAC00C0B66B /* ReportSpec.swift in Sources */,
 				538229E81DB2956600321194 /* ReportListResponseSpec.swift in Sources */,
 				538229ED1DB2994A00321194 /* ReportListResponse.swift in Sources */,
+				5336F96C1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */,
+				538229FB1DB2A10D00321194 /* ReportFilter.swift in Sources */,
+				538229F81DB29F3200321194 /* ReportFilterSpec.swift in Sources */,
 				538229E41DB28E7100321194 /* Report.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
