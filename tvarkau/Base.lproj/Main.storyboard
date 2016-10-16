@@ -22,6 +22,9 @@
                                     <frame key="frameInset" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="1Xt-L8-c6T" kind="showDetail" id="DE1-ba-vio"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,13 +69,24 @@
                     <view key="view" contentMode="scaleToFill" id="VfV-gP-uqh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a report." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52F-lh-zbh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="52F-lh-zbh" firstAttribute="centerX" secondItem="VfV-gP-uqh" secondAttribute="centerX" id="2Sa-WU-4h1"/>
+                            <constraint firstItem="52F-lh-zbh" firstAttribute="centerY" secondItem="VfV-gP-uqh" secondAttribute="centerY" id="vBY-rW-7cZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sHT-ZB-oeP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RrA-OY-8em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="311"/>
+            <point key="canvasLocation" x="517.60000000000002" y="310.79460269865069"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yt9-ay-Hg0">
@@ -104,4 +118,7 @@
             <point key="canvasLocation" x="-1300" y="-54"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DE1-ba-vio"/>
+    </inferredMetricsTieBreakers>
 </document>
