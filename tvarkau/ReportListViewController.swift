@@ -114,6 +114,8 @@ class ReportListViewController: UITableViewController {
     @objc
     private func refreshReports() {
         self.filter.resetPaging()
+        self.reports = []
+        self.tableView.reloadData()
         self.fetchReports()
     }
     

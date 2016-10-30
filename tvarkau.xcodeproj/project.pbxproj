@@ -15,6 +15,7 @@
 		5336F96C1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */; };
 		5336F96E1DB3ED2C0024D91D /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F96D1DB3ED2C0024D91D /* ReportCell.swift */; };
 		5336F9731DB4A6FD0024D91D /* ReportCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F9721DB4A6FD0024D91D /* ReportCellViewModel.swift */; };
+		5362B3241DC67E4400617927 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362B3231DC67E4400617927 /* ReportViewController.swift */; };
 		538229DA1DB26B1700321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
 		538229DB1DB26B1700321194 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D91DB26B1700321194 /* Curry.framework */; };
 		538229DC1DB26CDB00321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
@@ -71,6 +72,7 @@
 		5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
 		5336F96D1DB3ED2C0024D91D /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportCell.swift; path = ReportList/ReportCell.swift; sourceTree = "<group>"; };
 		5336F9721DB4A6FD0024D91D /* ReportCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportCellViewModel.swift; path = ReportList/ReportCellViewModel.swift; sourceTree = "<group>"; };
+		5362B3231DC67E4400617927 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportViewController.swift; path = ReportDetails/ReportViewController.swift; sourceTree = "<group>"; };
 		538229D81DB26B1700321194 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		538229D91DB26B1700321194 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		538229DE1DB26CEA00321194 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
@@ -155,6 +157,22 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
+		5362B3211DC67D8E00617927 /* ReportDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5362B3221DC67E2A00617927 /* ViewController */,
+			);
+			name = ReportDetails;
+			sourceTree = "<group>";
+		};
+		5362B3221DC67E2A00617927 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5362B3231DC67E4400617927 /* ReportViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		538229E51DB2952700321194 /* Report */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +247,7 @@
 				538229EE1DB29A7500321194 /* Services */,
 				539FD9951DA8C8E700C0B66B /* Extensions */,
 				539FD9941DA8C8E000C0B66B /* ReportList */,
+				5362B3211DC67D8E00617927 /* ReportDetails */,
 				539FD9641DA8C52C00C0B66B /* AppDelegate.swift */,
 				539FD96A1DA8C52C00C0B66B /* Main.storyboard */,
 				539FD96D1DA8C52C00C0B66B /* Assets.xcassets */,
@@ -498,6 +517,7 @@
 				5336F9681DB3891C0024D91D /* ReportService.swift in Sources */,
 				5336F9731DB4A6FD0024D91D /* ReportCellViewModel.swift in Sources */,
 				539FD9971DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
+				5362B3241DC67E4400617927 /* ReportViewController.swift in Sources */,
 				5336F9651DB388C10024D91D /* ReportListViewController.swift in Sources */,
 				5336F96B1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */,
 				538229EC1DB2994A00321194 /* ReportListResponse.swift in Sources */,
