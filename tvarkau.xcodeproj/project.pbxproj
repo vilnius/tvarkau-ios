@@ -13,6 +13,8 @@
 		5336F9691DB3891C0024D91D /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F9671DB3891C0024D91D /* ReportService.swift */; };
 		5336F96B1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */; };
 		5336F96C1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */; };
+		5336F96E1DB3ED2C0024D91D /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F96D1DB3ED2C0024D91D /* ReportCell.swift */; };
+		5336F9731DB4A6FD0024D91D /* ReportCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336F9721DB4A6FD0024D91D /* ReportCellViewModel.swift */; };
 		538229DA1DB26B1700321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
 		538229DB1DB26B1700321194 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D91DB26B1700321194 /* Curry.framework */; };
 		538229DC1DB26CDB00321194 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538229D81DB26B1700321194 /* Argo.framework */; };
@@ -67,6 +69,8 @@
 		5336F9641DB388C10024D91D /* ReportListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportListViewController.swift; sourceTree = "<group>"; };
 		5336F9671DB3891C0024D91D /* ReportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportService.swift; path = Services/ReportService.swift; sourceTree = "<group>"; };
 		5336F96A1DB389AD0024D91D /* URLSessionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
+		5336F96D1DB3ED2C0024D91D /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportCell.swift; path = ReportList/ReportCell.swift; sourceTree = "<group>"; };
+		5336F9721DB4A6FD0024D91D /* ReportCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportCellViewModel.swift; path = ReportList/ReportCellViewModel.swift; sourceTree = "<group>"; };
 		538229D81DB26B1700321194 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		538229D91DB26B1700321194 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		538229DE1DB26CEA00321194 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
@@ -138,8 +142,17 @@
 			isa = PBXGroup;
 			children = (
 				5336F9641DB388C10024D91D /* ReportListViewController.swift */,
+				5336F96D1DB3ED2C0024D91D /* ReportCell.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5336F9711DB4A6F00024D91D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5336F9721DB4A6FD0024D91D /* ReportCellViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		538229E51DB2952700321194 /* Report */ = {
@@ -244,6 +257,7 @@
 		539FD9941DA8C8E000C0B66B /* ReportList */ = {
 			isa = PBXGroup;
 			children = (
+				5336F9711DB4A6F00024D91D /* ViewModels */,
 				5336F9631DB388500024D91D /* ViewController */,
 				538229E61DB2953200321194 /* Response */,
 				538229E51DB2952700321194 /* Report */,
@@ -358,7 +372,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Code For Vilnius";
 				TargetAttributes = {
 					539FD9601DA8C52C00C0B66B = {
@@ -482,12 +496,14 @@
 			files = (
 				539FD9651DA8C52C00C0B66B /* AppDelegate.swift in Sources */,
 				5336F9681DB3891C0024D91D /* ReportService.swift in Sources */,
+				5336F9731DB4A6FD0024D91D /* ReportCellViewModel.swift in Sources */,
 				539FD9971DA8CE5C00C0B66B /* URLRequestExtensions.swift in Sources */,
 				5336F9651DB388C10024D91D /* ReportListViewController.swift in Sources */,
 				5336F96B1DB389AD0024D91D /* URLSessionExtensions.swift in Sources */,
 				538229EC1DB2994A00321194 /* ReportListResponse.swift in Sources */,
 				538229E31DB28E6E00321194 /* Report.swift in Sources */,
 				538229FA1DB2A10D00321194 /* ReportFilter.swift in Sources */,
+				5336F96E1DB3ED2C0024D91D /* ReportCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +586,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -620,6 +637,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

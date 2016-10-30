@@ -21,21 +21,26 @@ struct Report {
     let x: Float
     let y: Float
     let answer: String?
+    let thumbnailUrl: String?
 
 }
 
 extension Report: Decodable {
 
     static func decode(_ json: JSON) -> Decoded<Report> {
-        return curry(Report.init)
+        let r1 = curry(Report.init)
             <^> json <| "docNo"
             <*> json <| "description"
             <*> json <| "status"
             <*> json <| "address"
             <*> json <| "x"
             <*> json <| "y"
+
+        let r2 = r1
             <*> json <|? "answer"
-        
+            <*> json <|? "thumbnail"
+
+        return r2
     }
     
 }

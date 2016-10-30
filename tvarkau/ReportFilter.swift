@@ -22,6 +22,15 @@ struct ReportFilter {
         return ReportFilter(desc: nil, type: nil, address: nil, reporter: nil, date: nil, status: nil, start: 0)
     }
 
+    mutating func advancePage() {
+        self.start = (self.start ?? 0) + self.limit
+        print("advanced page to: \(self.start!)")
+    }
+
+    mutating func resetPaging() {
+        self.start = 0
+    }
+
     var dictionaryRepresentation: [String: AnyObject] {
         let descFilter = self.desc as AnyObject?
         let typeFilter = self.type as AnyObject?

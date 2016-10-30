@@ -33,6 +33,12 @@ class ReportService: NSObject {
         self.session = session
     }
 
+    func fetchAction() -> Action<ReportFilter, [Report], ReportServiceError> {
+        return Action { filter in
+            return self.fetchReports(withFilter: filter)
+        }
+    }
+
     func fetchReports(withFilter reportFilter: ReportFilter) -> SignalProducer<[Report], ReportServiceError> {
         let filterParams = reportFilter.dictionaryRepresentation
 
