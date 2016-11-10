@@ -497,6 +497,7 @@
 				INFOPLIST_FILE = tvarkau/Info.plist;
 				INFOPLIST_PREFIX_HEADER = $SRCROOT/Vers.h;
 				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +517,7 @@
 				INFOPLIST_FILE = tvarkau/Info.plist;
 				INFOPLIST_PREFIX_HEADER = $SRCROOT/Vers.h;
 				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkau;
 				PRODUCT_NAME = "$(TARGET_NAME)";
