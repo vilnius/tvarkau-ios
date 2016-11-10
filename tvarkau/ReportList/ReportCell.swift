@@ -20,6 +20,10 @@ class ReportCell: UITableViewCell {
             descLabel.reactive.text <~ vm.desc
             stateLabel.reactive.text <~ vm.status
             statusView.backgroundColor = vm.statusTint.value
+
+            if vm.hasThumb {
+                self.thumbView!.reactive.image <~ vm.thumbnail
+            }
         }
     }
 

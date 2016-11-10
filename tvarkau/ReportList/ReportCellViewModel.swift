@@ -41,28 +41,18 @@ class ReportCellViewModel {
 
         self.thumbnailUrl = report.thumbnailUrl
 
-        let thumbProducer = SignalProducer<UIImage?, NoError> { (observer, disposable) in
-            guard let thumbUrlString = report.thumbnailUrl else {
-                observer.sendCompleted()
+        guard let thumbUrlString = report.thumbnailUrl,
+            let thumbUrl = URL(string: thumbUrlString) else {
+                self.thumbnail = Property(value: nil)
                 return
-            }
-
-            guard let thumbURL = URL(string: thumbUrlString) else {
-                observer.sendCompleted()
-                return
-            }
-
-            do {
-                print("fetching thumbnail")
-                let data = try Data(contentsOf: thumbURL)
-                let image = UIImage(data: data, scale: UIScreen.main.scale)
-                observer.send(value: image)
-                observer.sendCompleted()
-            } catch {
-                observer.sendCompleted()
-            }
         }
-        self.thumbnail = Property(initial: nil, then: thumbProducer)
-    }
 
+        let thumbReq = URLRequest(url: thumbUrl)
+        let reqProducer: SignalProducer<UIImage?, NoError> = URLSession.shared.reactive.data(with: thumbReq)
+            .map { print("got thumb"); return UIImage(data: $0.0, scale: UIScreen.main.scale) }
+            .flatMapError { _ in return SignalProducer(value: nil) }
+
+        self.thumbnail = Property(initial: nil, then: reqProducer.observe(on: UIScheduler()))
+    }
+    
 }
