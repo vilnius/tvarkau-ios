@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0810"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Set Defaults"
+               scriptText = "export TVARKAU_HOSTNAME=&quot;www.vilnius.lt&quot;&#10;export TVARKAU_PREFIX=&quot;/m/m_problems/files/mobile2/server.php&quot;&#10;export DEFAULTS_PATH=&quot;${SRCROOT}/Defaults.plist&quot;&#10;&#10;rm $DEFAULTS_PATH&#10;&#10;/usr/libexec/PlistBuddy -c \&#10;  &quot;Add TVARKAU_HOSTNAME String &apos;${TVARKAU_HOSTNAME}&apos;&quot; \&#10;  $DEFAULTS_PATH&#10;&#10;/usr/libexec/PlistBuddy -c \&#10;  &quot;Add TVARKAU_PREFIX String &apos;${TVARKAU_PREFIX}&apos;&quot; \&#10;  $DEFAULTS_PATH&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "539FD9601DA8C52C00C0B66B"
+                     BuildableName = "tvarkau.app"
+                     BlueprintName = "tvarkau"
+                     ReferencedContainer = "container:tvarkau.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Generate Version"
+               scriptText = "cd $SRCROOT&#10;&#10;export BUNDLE_VERSION=`git rev-list --count --first-parent HEAD`&#10;export VERSION_STRING=`git describe --abbrev=0`&#10;&#10;echo &quot;#define TVARKAU_BUNDLE_VERSION ${BUNDLE_VERSION}&quot; &gt; ${SRCROOT}/Vers.h&#10;echo &quot;#define TVARKAU_BUNDLE_STRING ${VERSION_STRING}&quot; &gt;&gt; ${SRCROOT}/Vers.h&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "539FD9601DA8C52C00C0B66B"
+                     BuildableName = "tvarkau.app"
+                     BlueprintName = "tvarkau"
+                     ReferencedContainer = "container:tvarkau.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "539FD9601DA8C52C00C0B66B"
+               BuildableName = "tvarkau.app"
+               BlueprintName = "tvarkau"
+               ReferencedContainer = "container:tvarkau.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "539FD9761DA8C52C00C0B66B"
+               BuildableName = "tvarkauTests.xctest"
+               BlueprintName = "tvarkauTests"
+               ReferencedContainer = "container:tvarkau.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "539FD9811DA8C52C00C0B66B"
+               BuildableName = "tvarkauUITests.xctest"
+               BlueprintName = "tvarkauUITests"
+               ReferencedContainer = "container:tvarkau.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "539FD9601DA8C52C00C0B66B"
+            BuildableName = "tvarkau.app"
+            BlueprintName = "tvarkau"
+            ReferencedContainer = "container:tvarkau.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "539FD9601DA8C52C00C0B66B"
+            BuildableName = "tvarkau.app"
+            BlueprintName = "tvarkau"
+            ReferencedContainer = "container:tvarkau.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "539FD9601DA8C52C00C0B66B"
+            BuildableName = "tvarkau.app"
+            BlueprintName = "tvarkau"
+            ReferencedContainer = "container:tvarkau.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

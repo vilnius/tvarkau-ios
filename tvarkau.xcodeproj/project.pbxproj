@@ -59,7 +59,7 @@
 		539FD9721DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539FD9961DA8CE5C00C0B66B /* URLRequestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequestExtensions.swift; path = Extensions/URLRequestExtensions.swift; sourceTree = "<group>"; };
 		539FD9A51DA8D31000C0B66B /* Vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vers.h; path = ../Vers.h; sourceTree = "<group>"; };
-		539FD9A71DA8D9BD00C0B66B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		539FD9A71DA8D9BD00C0B66B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = ../Defaults.plist; sourceTree = "<group>"; };
 		53A6BECD1DD479160016C058 /* ReportStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
