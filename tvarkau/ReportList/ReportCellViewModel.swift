@@ -16,6 +16,7 @@ class ReportCellViewModel {
 
     let desc: Property<String>
     let status: Property<String>
+    let statusTint: Property<UIColor>
     let address: Property<String>
     let coordinates: Property<CLLocationCoordinate2D>
     let answer: Property<String?>
@@ -29,7 +30,8 @@ class ReportCellViewModel {
 
     init(with report: Report) {
         self.desc = Property(value: report.desc)
-        self.status = Property(value: report.status)
+        self.status = Property(value: report.status.description)
+        self.statusTint = Property(value: report.status.tint)
         self.address = Property(value: report.address)
 
         let coords = CLLocationCoordinate2D(latitude: Double(report.x), longitude: Double(report.y))

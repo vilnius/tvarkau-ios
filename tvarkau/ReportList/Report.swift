@@ -16,7 +16,7 @@ struct Report {
 
     let docNo: String
     let desc: String
-    let status: String
+    let status: ReportStatus
     let address: String
     let x: Float
     let y: Float
