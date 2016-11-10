@@ -91,10 +91,6 @@
 		539FD96D1DA8C52C00C0B66B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		539FD9701DA8C52C00C0B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539FD9721DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		539FD9771DA8C52C00C0B66B /* tvarkauTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tvarkauTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		539FD97D1DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		539FD9821DA8C52C00C0B66B /* tvarkauUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tvarkauUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		539FD9881DA8C52C00C0B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539FD9961DA8CE5C00C0B66B /* URLRequestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequestExtensions.swift; path = Extensions/URLRequestExtensions.swift; sourceTree = "<group>"; };
 		539FD9991DA8CE7800C0B66B /* URLRequestextensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequestextensionsSpec.swift; path = Extensions/URLRequestextensionsSpec.swift; sourceTree = "<group>"; };
 		539FD99D1DA8CF5F00C0B66B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -223,8 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				539FD9631DA8C52C00C0B66B /* tvarkau */,
-				539FD97A1DA8C52C00C0B66B /* tvarkauTests */,
-				539FD9851DA8C52C00C0B66B /* tvarkauUITests */,
 				539FD99B1DA8CF4800C0B66B /* Frameworks */,
 				539FD9621DA8C52C00C0B66B /* Products */,
 			);
@@ -234,8 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				539FD9611DA8C52C00C0B66B /* tvarkau.app */,
-				539FD9771DA8C52C00C0B66B /* tvarkauTests.xctest */,
-				539FD9821DA8C52C00C0B66B /* tvarkauUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,22 +247,6 @@
 				539FD9A61DA8D31500C0B66B /* Supporting Files */,
 			);
 			path = tvarkau;
-			sourceTree = "<group>";
-		};
-		539FD97A1DA8C52C00C0B66B /* tvarkauTests */ = {
-			isa = PBXGroup;
-			children = (
-				539FD97D1DA8C52C00C0B66B /* Info.plist */,
-			);
-			path = tvarkauTests;
-			sourceTree = "<group>";
-		};
-		539FD9851DA8C52C00C0B66B /* tvarkauUITests */ = {
-			isa = PBXGroup;
-			children = (
-				539FD9881DA8C52C00C0B66B /* Info.plist */,
-			);
-			path = tvarkauUITests;
 			sourceTree = "<group>";
 		};
 		539FD9941DA8C8E000C0B66B /* ReportList */ = {
@@ -347,43 +323,6 @@
 			productReference = 539FD9611DA8C52C00C0B66B /* tvarkau.app */;
 			productType = "com.apple.product-type.application";
 		};
-		539FD9761DA8C52C00C0B66B /* tvarkauTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 539FD98E1DA8C52C00C0B66B /* Build configuration list for PBXNativeTarget "tvarkauTests" */;
-			buildPhases = (
-				539FD9731DA8C52C00C0B66B /* Sources */,
-				539FD9741DA8C52C00C0B66B /* Frameworks */,
-				539FD9751DA8C52C00C0B66B /* Resources */,
-				539FD9A41DA8D09000C0B66B /* Run Carthage */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				539FD9791DA8C52C00C0B66B /* PBXTargetDependency */,
-			);
-			name = tvarkauTests;
-			productName = tvarkauTests;
-			productReference = 539FD9771DA8C52C00C0B66B /* tvarkauTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		539FD9811DA8C52C00C0B66B /* tvarkauUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 539FD9911DA8C52C00C0B66B /* Build configuration list for PBXNativeTarget "tvarkauUITests" */;
-			buildPhases = (
-				539FD97E1DA8C52C00C0B66B /* Sources */,
-				539FD97F1DA8C52C00C0B66B /* Frameworks */,
-				539FD9801DA8C52C00C0B66B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				539FD9841DA8C52C00C0B66B /* PBXTargetDependency */,
-			);
-			name = tvarkauUITests;
-			productName = tvarkauUITests;
-			productReference = 539FD9821DA8C52C00C0B66B /* tvarkauUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -398,19 +337,6 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BZW4CW4732;
 						ProvisioningStyle = Automatic;
-					};
-					539FD9761DA8C52C00C0B66B = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BZW4CW4732;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 539FD9601DA8C52C00C0B66B;
-					};
-					539FD9811DA8C52C00C0B66B = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BZW4CW4732;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 539FD9601DA8C52C00C0B66B;
 					};
 				};
 			};
@@ -428,8 +354,6 @@
 			projectRoot = "";
 			targets = (
 				539FD9601DA8C52C00C0B66B /* tvarkau */,
-				539FD9761DA8C52C00C0B66B /* tvarkauTests */,
-				539FD9811DA8C52C00C0B66B /* tvarkauUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -721,75 +645,6 @@
 			};
 			name = Release;
 		};
-		539FD98F1DA8C52C00C0B66B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = BZW4CW4732;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = tvarkauTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkauTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tvarkau.app/tvarkau";
-			};
-			name = Debug;
-		};
-		539FD9901DA8C52C00C0B66B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = BZW4CW4732;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = tvarkauTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkauTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tvarkau.app/tvarkau";
-			};
-			name = Release;
-		};
-		539FD9921DA8C52C00C0B66B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = BZW4CW4732;
-				INFOPLIST_FILE = tvarkauUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkauUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = tvarkau;
-			};
-			name = Debug;
-		};
-		539FD9931DA8C52C00C0B66B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = BZW4CW4732;
-				INFOPLIST_FILE = tvarkauUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lt.vilnius.tvarkauUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = tvarkau;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -807,24 +662,6 @@
 			buildConfigurations = (
 				539FD98C1DA8C52C00C0B66B /* Debug */,
 				539FD98D1DA8C52C00C0B66B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		539FD98E1DA8C52C00C0B66B /* Build configuration list for PBXNativeTarget "tvarkauTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				539FD98F1DA8C52C00C0B66B /* Debug */,
-				539FD9901DA8C52C00C0B66B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		539FD9911DA8C52C00C0B66B /* Build configuration list for PBXNativeTarget "tvarkauUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				539FD9921DA8C52C00C0B66B /* Debug */,
-				539FD9931DA8C52C00C0B66B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
