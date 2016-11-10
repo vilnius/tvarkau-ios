@@ -14,8 +14,6 @@ class ReportListViewController: UITableViewController {
     fileprivate var collapseDetailViewController = true
     private var fetchAction: Action<ReportFilter, [Report], ReportServiceError>?
 
-    var loadDisposable: Disposable? = nil
-
     var reports = [Report]() {
         didSet {
             DispatchQueue.main.async {
@@ -24,8 +22,6 @@ class ReportListViewController: UITableViewController {
         }
     }
     let reportService = ReportService()
-
-    var currentPage: Int = 0
     var filter = ReportFilter.standard
 
     required init?(coder aDecoder: NSCoder) {
@@ -53,10 +49,7 @@ class ReportListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard indexPath.row != reports.count else {
-            if self.loadDisposable == nil {
-                self.fetchReports()
-            }
-
+            self.fetchReports()
             return tableView.dequeueReusableCell(withIdentifier: "LoadingCell")!
         }
 
@@ -87,17 +80,23 @@ class ReportListViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == ShowReportSegueId {
+            guard let selectedIP = self.tableView.indexPathForSelectedRow else { return }
+
+            let report = self.reports[selectedIP.row]
+            let vm = ReportViewModel(report)
+
+            let dstNavC = segue.destination as! UINavigationController
+            (dstNavC.topViewController as! ReportViewController).viewModel = vm
+        }
     }
 
     // MARK: - Private
 
     private func fetchReports() {
-        fetchAction = reportService.fetchAction()
-        self.loadDisposable = fetchAction?.apply(self.filter).startWithResult { (result) in
+        fetchAction = reportService.fetchReportListAction()
+        fetchAction?.apply(self.filter).startWithResult { (result) in
             switch(result) {
             case let .success(reports):
                 self.reports.append(contentsOf: reports)
@@ -107,7 +106,6 @@ class ReportListViewController: UITableViewController {
             }
 
             self.refreshControl?.endRefreshing()
-            self.loadDisposable = nil
         }
     }
 

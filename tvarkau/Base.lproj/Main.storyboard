@@ -84,7 +84,7 @@ fooj</string>
                                     <outlet property="stateLabel" destination="fPL-yz-0qJ" id="ngy-bm-E7Z"/>
                                     <outlet property="titleLabel" destination="tbp-1e-0oc" id="7uK-yi-2Ox"/>
                                     <outlet property="updateTimeLabel" destination="Mcc-Pp-wfG" id="f3a-pY-keY"/>
-                                    <segue destination="4RN-b6-1SF" kind="showDetail" id="Dlf-VE-wMu"/>
+                                    <segue destination="4RN-b6-1SF" kind="showDetail" identifier="ShowReportSegue" id="Dlf-VE-wMu"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReportImageCell" rowHeight="97" id="w8B-cj-K9Z" customClass="ReportCell" customModule="tvarkau" customModuleProvider="target">
@@ -168,7 +168,7 @@ fooj</string>
                                     <outlet property="thumbView" destination="iyh-DF-Thh" id="k0P-h2-Es8"/>
                                     <outlet property="titleLabel" destination="eGb-bM-z8N" id="bTZ-Hm-hzh"/>
                                     <outlet property="updateTimeLabel" destination="Ztr-ZA-NnR" id="c0o-Od-2ZZ"/>
-                                    <segue destination="4RN-b6-1SF" kind="showDetail" id="jPB-Dk-cK4"/>
+                                    <segue destination="4RN-b6-1SF" kind="showDetail" identifier="ShowReportSegue" id="jPB-Dk-cK4"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="c0a-P3-Smt">
@@ -320,7 +320,7 @@ fooj</string>
                                                         <color key="textColor" red="0.73028373719999995" green="0.72552752490000005" blue="0.75366687769999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5H-b9-1zC">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5H-b9-1zC">
                                                         <rect key="frame" x="8" y="33" width="359" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -334,10 +334,11 @@ fooj</string>
                                                     <constraint firstAttribute="trailing" secondItem="F5H-b9-1zC" secondAttribute="trailing" constant="8" id="APa-Gy-bHb"/>
                                                     <constraint firstItem="jen-9x-yrj" firstAttribute="top" secondItem="yeI-b3-rad" secondAttribute="top" constant="8" id="DNf-4A-qYm"/>
                                                     <constraint firstAttribute="trailing" secondItem="jen-9x-yrj" secondAttribute="trailing" constant="8" id="J0e-oS-YXL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="F5H-b9-1zC" secondAttribute="bottom" constant="8" id="Oul-0v-aWF"/>
                                                     <constraint firstItem="oi6-mT-Z2R" firstAttribute="leading" secondItem="yeI-b3-rad" secondAttribute="leading" constant="8" id="UMR-gS-AsS"/>
                                                     <constraint firstItem="F5H-b9-1zC" firstAttribute="leading" secondItem="yeI-b3-rad" secondAttribute="leading" constant="8" id="bzC-H4-iQ5"/>
                                                     <constraint firstItem="jen-9x-yrj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oi6-mT-Z2R" secondAttribute="trailing" constant="8" id="tN2-cd-Ua3"/>
-                                                    <constraint firstAttribute="height" constant="58" id="xrr-Q3-Uy7"/>
+                                                    <constraint firstAttribute="height" constant="58" placeholder="YES" id="xrr-Q3-Uy7"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8p-CX-cO7">
@@ -355,7 +356,7 @@ fooj</string>
                                                         <color key="textColor" red="0.73028373719999995" green="0.72552752490000005" blue="0.75366687769999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-n9-MbF">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-n9-MbF">
                                                         <rect key="frame" x="8" y="33" width="359" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -376,10 +377,17 @@ fooj</string>
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ajh-Hn-PQy" firstAttribute="width" secondItem="5h8-yS-LW7" secondAttribute="width" id="4p1-Pq-9yo"/>
+                                            <constraint firstItem="yeI-b3-rad" firstAttribute="width" secondItem="5h8-yS-LW7" secondAttribute="width" id="dmg-vQ-0XA"/>
+                                            <constraint firstItem="e8p-CX-cO7" firstAttribute="width" secondItem="5h8-yS-LW7" secondAttribute="width" id="fOK-zS-DI8"/>
+                                            <constraint firstItem="Gwz-IM-WvT" firstAttribute="width" secondItem="5h8-yS-LW7" secondAttribute="width" id="ofc-3o-w30"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="5h8-yS-LW7" firstAttribute="width" secondItem="KS0-ju-OXg" secondAttribute="width" id="MeF-y2-3xD"/>
                                     <constraint firstItem="5h8-yS-LW7" firstAttribute="top" secondItem="KS0-ju-OXg" secondAttribute="top" id="cEg-8h-P4O"/>
                                     <constraint firstItem="5h8-yS-LW7" firstAttribute="leading" secondItem="KS0-ju-OXg" secondAttribute="leading" id="j2h-pL-Uk1"/>
                                     <constraint firstItem="5h8-yS-LW7" firstAttribute="centerX" secondItem="KS0-ju-OXg" secondAttribute="centerX" placeholder="YES" id="s8t-GZ-pQt"/>
@@ -400,7 +408,11 @@ fooj</string>
                     </view>
                     <navigationItem key="navigationItem" title="Report" id="sHT-ZB-oeP"/>
                     <connections>
+                        <outlet property="addressLabel" destination="ReG-Qe-cwm" id="eN8-aF-PZf"/>
+                        <outlet property="answerLabel" destination="Il2-n9-MbF" id="Qtm-pI-rgG"/>
+                        <outlet property="queryLabel" destination="F5H-b9-1zC" id="jxr-Kp-Hg1"/>
                         <outlet property="scrollView" destination="KS0-ju-OXg" id="lGL-DO-zhO"/>
+                        <outlet property="titleLabel" destination="RgE-P1-uyw" id="kQj-TV-Ph3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RrA-OY-8em" userLabel="First Responder" sceneMemberID="firstResponder"/>

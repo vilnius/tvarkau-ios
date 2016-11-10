@@ -22,6 +22,7 @@ struct Report {
     let y: Float
     let answer: String?
     let thumbnailUrl: String?
+    let type: String?
 
 }
 
@@ -39,6 +40,7 @@ extension Report: Decodable {
         let r2 = r1
             <*> json <|? "answer"
             <*> json <|? "thumbnail"
+            <*> json <|? "type"
 
         return r2
     }

@@ -21,7 +21,11 @@ class ReportCellViewModel {
     let answer: Property<String?>
     let thumbnail: Property<UIImage?>
 
-    let hasThumb: Bool
+    private let thumbnailUrl: String?
+
+    var hasThumb: Bool {
+        return thumbnailUrl != nil
+    }
 
     init(with report: Report) {
         self.desc = Property(value: report.desc)
@@ -33,24 +37,25 @@ class ReportCellViewModel {
 
         self.answer = Property(value: report.answer)
 
-        guard let thumbURLString = report.thumbnailUrl else {
-            self.hasThumb = false
-            self.thumbnail = Property(value: nil)
-            return
-        }
-
-        self.hasThumb = true
+        self.thumbnailUrl = report.thumbnailUrl
 
         let thumbProducer = SignalProducer<UIImage?, NoError> { (observer, disposable) in
-            guard let thumbURL = URL(string: thumbURLString) else {
+            guard let thumbUrlString = report.thumbnailUrl else {
+                observer.sendCompleted()
+                return
+            }
+
+            guard let thumbURL = URL(string: thumbUrlString) else {
                 observer.sendCompleted()
                 return
             }
 
             do {
+                print("fetching thumbnail")
                 let data = try Data(contentsOf: thumbURL)
                 let image = UIImage(data: data, scale: UIScreen.main.scale)
                 observer.send(value: image)
+                observer.sendCompleted()
             } catch {
                 observer.sendCompleted()
             }
